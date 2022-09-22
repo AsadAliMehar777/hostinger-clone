@@ -1,0 +1,905 @@
+/* ======================================================================
+========== CSS Reset and Global divs ===================
+====================================================================== */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.m10 {
+  height: 10px;
+}
+.m50 {
+  height: 50px;
+}
+.m100 {
+  height: 100px;
+}
+body {
+  overflow-x: hidden !important;
+}
+/* ======================================================================
+========== Navigation Menu ===================
+====================================================================== */
+
+#sticky-navbar {
+  z-index: 99;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 2.8em;
+  background-color: #5025d1;
+}
+header > a > img {
+  height: 35px;
+  transition: all 0.3;
+}
+header > a > img:hover {
+  filter: contrast(0.7);
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav li {
+  margin: 0 20px;
+}
+header nav li p,
+header nav li a {
+  z-index: 5;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+header nav li p:hover,
+header nav li a:hover {
+  color: rgb(190, 190, 190);
+}
+header nav li p:hover img,
+header nav li a:hover img {
+  filter: contrast(0.4) invert();
+}
+header nav li p img,
+header nav li a img {
+  filter: invert();
+  height: 10px;
+  width: 13px;
+  margin-left: 5px;
+  transition: all 0.3s;
+}
+#cart img,
+#logIn img {
+  height: 25px;
+  width: 25px;
+}
+#cart,
+#logIn {
+  border: 2px solid white;
+  font-weight: 900;
+  padding: 3px 0.9em;
+  border-radius: 2em;
+}
+#cart:hover,
+#logIn:hover {
+  border: 2px solid rgb(172, 172, 172);
+  animation: shake 0.5s;
+}
+@keyframes forButton {
+  0%,
+  100% {
+    transform: translate(0px);
+  }
+  33.33% {
+    transform: translate(2px);
+  }
+  66.44% {
+    transform: translate(-2px);
+  }
+}
+.menu {
+  position: absolute;
+  border: 2px solid black;
+  padding: 16px 12px;
+  background-color: rgb(237, 236, 255);
+  display: none;
+  border-radius: 6px;
+  z-index: 2;
+}
+.menu h3 {
+  margin: 5px;
+  font-size: 20px;
+  color: rgb(56, 56, 56);
+  border-bottom: 2px solid rgb(34, 34, 34);
+  cursor: pointer;
+  padding: 3px 0;
+}
+#burger {
+  display: inline-block;
+  display: none;
+  cursor: pointer;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 35px;
+  height: 5px;
+  margin: 6px 10px;
+  transition: 0.4s;
+  background-color: white;
+  z-index: 9999;
+}
+
+.change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .line2 {
+  opacity: 0;
+}
+
+.change .line3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* ======================================================================
+========== Navigation Small Float Menus ===================
+====================================================================== */
+
+#mHosting {
+  top: 2.7em;
+  right: 29.2em;
+  padding: 15px 2.7em;
+}
+#mHosting h3,
+#mVPS h3,
+#mEmail h3,
+#mDomain h3 {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+#mHosting::before {
+  content: "";
+  position: absolute;
+  top: -0.8em;
+  left: 3em;
+  rotate: 45deg;
+  height: 6em;
+  width: 3em;
+  background-color: rgb(237, 236, 255);
+  z-index: -1;
+}
+#mVPS {
+  top: 2.8em;
+  right: 21.5em;
+  padding: 15px 2.7em;
+}
+#mVPS::before {
+  content: "";
+  position: absolute;
+  top: -0.8em;
+  left: 3em;
+  rotate: 45deg;
+  height: 6em;
+  width: 3em;
+  background-color: rgb(237, 236, 255);
+  z-index: -1;
+}
+#mEmail {
+  top: 2.8em;
+  right: 12.2em;
+  padding: 15px 2.7em;
+}
+#mEmail::before {
+  content: "";
+  position: absolute;
+  top: -0.8em;
+  left: 3em;
+  rotate: 45deg;
+  height: 6em;
+  width: 3em;
+  background-color: rgb(237, 236, 255);
+  z-index: -1;
+}
+#mDomain {
+  top: 2.8em;
+  right: 12.2em;
+  padding: 15px 2.7em;
+}
+#mDomain::before {
+  content: "";
+  position: absolute;
+  top: -0.8em;
+  left: 3em;
+  rotate: 45deg;
+  height: 6em;
+  width: 3em;
+  background-color: rgb(237, 236, 255);
+  z-index: -1;
+}
+
+/* ======================================================================
+========== Hero Section ===================
+====================================================================== */
+
+#Hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #5025d1;
+  padding: 5% 8%;
+  animation-name: moveHero;
+  color: white;
+  background: linear-gradient(to bottom, #5025d1 50%, #8f6aff 100%);
+}
+
+.heroLeft {
+  width: 50%;
+}
+.heroLeft h1 {
+  font-size: 2.2em;
+  font-weight: 900;
+  margin: 10px 0px;
+}
+.heroLeft p {
+  font-size: 20px;
+  margin: 10px 0px;
+}
+.heroLeft button,
+.btn {
+  height: 2.2em;
+  margin: 1em 0px;
+  transition: background-color 0.5s;
+  border: 0 transparent;
+  padding: 4px;
+  width: 8em;
+  font-size: 26px;
+  font-weight: 900;
+  border-radius: 2em;
+  cursor: pointer;
+  color: #5025d1;
+  background-color: white;
+  border: 2px solid #5025d1;
+}
+.heroLeft button:hover,
+.btn:hover {
+  background-color: #5025d1;
+  color: white;
+  border: 2px solid white;
+}
+.heroRight img {
+  height: 500px;
+  animation: heroImage 0.7s infinite;
+}
+@keyframes heroImage {
+  0%,
+  100% {
+    transform: rotate(0.4deg);
+  }
+  50% {
+    transform: rotate(-0.4deg);
+  }
+}
+.tick {
+  font-weight: 900;
+  color: #d0c1ff;
+  font-size: 24px;
+}
+.heroLeft h4 {
+  color: white;
+  margin-top: 3em;
+  color: #a588ff;
+}
+
+/* ======================================================================
+========== Supporting Platforms Section ===================
+====================================================================== */
+
+#support {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#support img {
+  height: 100px;
+  opacity: 0.6;
+  animation: shake 1s infinite;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+#support img:nth-child(2) {
+  height: 50px;
+}
+
+/* ======================================================================
+========== Rating Section ===================
+====================================================================== */
+
+#ratings {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: rgb(14, 0, 145);
+}
+#ratings h1 {
+  font-size: 2.2em;
+}
+#ratings p {
+  font-size: 24px;
+  width: 80%;
+}
+#ratings .images img {
+  height: 120px;
+  width: 250px;
+  animation: shake 5s infinite;
+}
+#ratings .images {
+  padding: 0 5em;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* ======================================================================
+========== Web Hosting Information Menu ===================
+====================================================================== */
+
+#webHosting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#webHosting h1,
+#webHosting h2 {
+  font-size: 2.2em;
+  color: #0e0091;
+}
+#webHosting p {
+  width: 42%;
+  font-size: 16px;
+  text-align: center;
+  color: #0e0091;
+}
+#hostingTable {
+  width: 70%;
+  border: 1px solid rgb(124, 124, 124);
+  padding-bottom: 3em;
+  color: #0e0091;
+}
+#hostingTable h1 {
+  font-size: 2.2em;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #5025d1;
+}
+#hostingTable .content {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+.content div {
+  width: 80%;
+  margin-top: 5px;
+}
+#webHosting h2 {
+  padding: 3px 0;
+  text-align: center;
+  width: 100%;
+  font-size: 2.2em;
+  background-color: #5025d1;
+  color: white;
+}
+#webHosting h4,
+.moreContent h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+#webHosting .center,
+.moreCenter {
+  margin-top: 2.7em;
+  border-right: 1px solid rgb(124, 124, 124);
+  border-left: 1px solid rgb(124, 124, 124);
+}
+#webHosting .center,
+#webHosting .left,
+#webHosting .right,
+#webHosting .moreCenter,
+#webHosting .moreLeft,
+#webHosting .moreRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#webHosting .center h2 {
+  background-color: white;
+  color: #0e0091;
+  font-size: 3em;
+}
+#webHosting .center p {
+  width: 100%;
+  color: #0e0091;
+}
+#webHosting .center button {
+  background-color: #5025d1;
+  color: white;
+}
+#webHosting .center button:hover {
+  color: #5025d1;
+  background-color: white;
+  border: 2px solid #5025d1;
+}
+#webHosting sup {
+  font-size: 24px;
+}
+#webHosting .price {
+  font-size: 26px;
+}
+#viewMore {
+  height: 80px;
+  width: 80px;
+  margin: 0 auto;
+  padding: 10px;
+  align-self: center;
+  display: block;
+  border-width: 2px;
+  border-color: #0e0091;
+  border-style: solid;
+  animation: border-effect 4s infinite;
+}
+@keyframes border-effect {
+  0%,
+  100% {
+    border-radius: 1.2em 2em 1.4em 2.5em;
+  }
+  25% {
+    border-radius: 2.5em 2em 1.4em 1.1em;
+  }
+  50% {
+    border-radius: 1.7em 1.2em 2em 2.2em;
+  }
+  75% {
+    border-radius: 2.6em 1.3em 2em 1.7em;
+  }
+}
+
+.moreContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#more h3 {
+  text-align: center;
+}
+#more {
+  display: none;
+}
+
+/* ======================================================================
+========== Services Section ===================
+====================================================================== */
+
+#services {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#services .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#services .record {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#services .cell {
+  margin: 1em auto;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 33%;
+  animation: verShake 2s infinite;
+}
+@keyframes verShake {
+  10%,
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+#services h1 {
+  font-size: 2.2em;
+  color: #0e0091;
+}
+
+/* ======================================================================
+========== Clients Review and Cards Section ===================
+====================================================================== */
+
+#clients {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0e0091;
+}
+#clients .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+#clients .card {
+  width: 26%;
+  border: 2px solid rgb(59, 59, 59);
+  height: 16em;
+  margin: 0 1em;
+  padding: 30px 10px;
+  animation: shake 2s infinite;
+  border-radius: 5px;
+  background: linear-gradient(rgb(233, 233, 233), rgb(186, 178, 255));
+  box-shadow: 2px 2px 4px 4px;
+}
+#clients h2 {
+  font-size: 2.2em;
+}
+#clients .card p:first-child {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-size: 16px;
+  width: 90%;
+}
+#clients .card img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+#clients .card > div {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2em;
+  padding: 5px;
+  background-color: #8f6aff;
+  color: white;
+}
+#clients .card h4 {
+  cursor: pointer;
+  color: rgb(22, 22, 22);
+  margin-top: 20px;
+}
+#clients button {
+  height: 2.2em;
+  width: 16em;
+  background-color: #5025d1;
+  color: white;
+  font-size: 26px;
+  padding: 4px 14px;
+  border-radius: 1.4em;
+  font-weight: 900;
+  margin-top: 50px;
+  transition: background 0.5s;
+}
+#clients button:hover {
+  border: 2px solid #5025d1;
+  color: #5025d1;
+  background-color: white;
+}
+
+/* ======================================================================
+========== Features and Specialities Section ===================
+====================================================================== */
+
+#special {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+#special > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+  justify-content: space-around;
+  padding: 5px 12px;
+}
+#special > div > div {
+  width: 40%;
+}
+#special > div img {
+  height: 320px;
+}
+#special .purple {
+  background: linear-gradient(#5025d1, #9f80ff);
+  color: white;
+}
+#special .white {
+  background-color: white;
+  border: 2px solid rgb(58, 58, 58);
+}
+
+/* ======================================================================
+========== Quotations and Recommendation Section ===================
+====================================================================== */
+
+#quotes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#quotes h2 {
+  font-size: 1.6em;
+  color: #0e0091;
+  font-family: 900;
+}
+#quotes > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quotes .card1,
+#quotes .card2 {
+  flex-direction: column;
+  width: 32%;
+  border-radius: 5px;
+  border: 2px solid black;
+  color: #0e0091;
+  height: 15em;
+  padding: 10px 20px;
+  justify-content: left;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 2em 1em;
+  background: linear-gradient(rgb(233, 233, 233), rgb(186, 178, 255));
+  box-shadow: 1px 1px 6px 6px;
+  animation: cold 2s infinite;
+}
+#quotes h4 {
+  color: rgb(88, 88, 88);
+  margin-top: 1em;
+}
+#quotes img {
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin-top: 3em;
+}
+#quotes .card2 img {
+  margin-top: 4.7em;
+}
+@keyframes cold {
+  0%,
+  100% {
+    rotate: -1.5deg;
+  }
+  50% {
+    rotate: 1.5deg;
+  }
+}
+
+/* ======================================================================
+========== Tough Person Section ===================
+====================================================================== */
+
+#tough {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#tough .right {
+  width: 40%;
+  color: #0e0091;
+}
+#tough p {
+  margin-top: 5px;
+}
+#tough h4 {
+  color: rgb(43, 43, 43);
+  text-decoration: underline;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* ======================================================================
+========== Footer Section ===================
+====================================================================== */
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  background: linear-gradient(#5025d1, rgb(122, 122, 255));
+  padding: 2em;
+  overflow-x: hidden;
+  text-align: center;
+}
+#footer h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+#footer div {
+  width: 20%;
+  display: flex;
+  align-items: center;
+
+  justify-content: flex-start;
+  gap: 5px;
+  flex-direction: column;
+}
+#footer .row1 img {
+  height: 40px;
+  margin-bottom: 10px;
+  transition: transform 0.5s;
+}
+#footer .row1 {
+  text-align: center;
+}
+#footer .row1 .paycards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+}
+#footer .row1 .paycards img {
+  height: 40px;
+}
+#footer .row1 .paycards img:hover {
+  transform: scale(1.1);
+}
+#footer div h4 {
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+#footer div h4:hover {
+  color: #d0c1ff;
+}
+#footer .pay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10em;
+}
+
+/* ======================================================================
+========== Log In Form ===================
+====================================================================== */
+
+#logInPage #upperHead {
+  height: 80vh;
+  width: 100%;
+  padding: 100px 0;
+  background: url(./images/workbench.jpg) no-repeat center center / cover;
+  background-color: rgba(7, 0, 66, 0.7);
+  background-blend-mode: darken;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: #ffff;
+}
+#upperHead h1 {
+  font-size: 72px;
+}
+#upperHead p {
+  font-size: 32px;
+  width: 60%;
+}
+#logInPage .form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+}
+::placeholder {
+  color: #0e0091;
+}
+.form input {
+  color: #0e0091;
+  height: 2.5em;
+  font-size: 24px;
+  font-weight: 900;
+  width: 70%;
+  border: 2px solid #0e0091;
+  outline: #0e0091;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.form input:nth-child(3) {
+  background-color: #0e0091;
+  height: 2.5em;
+  font-size: 24px;
+  font-weight: 900;
+  width: 70%;
+  border: 2px solid #0e0091;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+.form input:nth-child(3):hover {
+  color: #0e0091;
+  background-color: white;
+  animation: shake 0.5s;
+}
+::selection {
+  color: white;
+  background-color: #5025d1;
+}

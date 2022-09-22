@@ -1,0 +1,673 @@
+/* ======================================================================
+========== Responsive Design and Media Queries ===================
+====================================================================== */
+
+/* ======================================================================
+========== #1- 1200px ===================
+====================================================================== */
+
+@media (max-width: 1200px) {
+  header > a > img {
+    height: 30px;
+    transition: all 0.3;
+  }
+  header nav li {
+    margin: 0 14px;
+  }
+  header nav li p,
+  header nav li a {
+    font-size: 14px;
+  }
+  .heroLeft h1 {
+    font-size: 1.6em;
+    font-weight: 800;
+    margin: 7px 0px;
+  }
+  .heroRight img {
+    height: 400px;
+  }
+  .heroLeft h4 {
+    font-size: 16px;
+  }
+  #mHosting {
+    right: 23.2em;
+  }
+  #mVPS {
+    right: 16em;
+  }
+  #mEmail {
+    right: 8em;
+  }
+  #mDomain {
+    right: 8em;
+  }
+  #ratings h1 {
+    font-size: 1.6em;
+  }
+  #ratings p {
+    font-size: 20px;
+  }
+  #ratings .images img {
+    height: 100px;
+    width: 240px;
+  }
+  #webHosting h1,
+  #webHosting h2 {
+    font-size: 1.6em;
+  }
+  #hostingTable {
+    width: 80%;
+  }
+  #hostingTable h1 {
+    font-size: 1.6em;
+    padding: 4px;
+  }
+  #webHosting h2 {
+    padding: 2px 0;
+    font-size: 1.6em;
+  }
+  #webHosting h4,
+  .moreContent h3 {
+    font-size: 16px;
+    margin: 3px 0;
+  }
+  #webHosting .center,
+  .moreCenter {
+    margin-top: 2.4em;
+  }
+  #webHosting .center h2 {
+    font-size: 2.5em;
+  }
+  #webHosting .price {
+    font-size: 22px;
+  }
+  #services .container {
+    padding: 0 1.6em;
+  }
+  #services h1 {
+    font-size: 1.6em;
+    color: #0e0091;
+  }
+  #clients .card {
+    width: 26%;
+    height: 18em;
+    margin: 0 0.8em;
+    padding: 26px 8px;
+  }
+  #clients h2 {
+    font-size: 1.6em;
+  }
+  #clients .card p:first-child {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 14px;
+    width: 90%;
+  }
+  #clients .card img {
+    height: 60px;
+    width: 60px;
+  }
+  #quotes .card1,
+  #quotes .card2 {
+    height: 18em;
+    padding: 8px 17px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 1.7em 0.8em;
+  }
+}
+#upperHead h1 {
+  font-size: 52px;
+}
+#upperHead p {
+  font-size: 24px;
+}
+
+/* ======================================================================
+========== #2- 1000px ===================
+====================================================================== */
+
+@media (max-width: 1000px) {
+  #burger {
+    display: block;
+    z-index: 100;
+  }
+  #navbar nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#5025d1, rgb(122, 122, 255));
+    transform: translateX(100%) translateY(-100%);
+    transition: transform 1s;
+  }
+  #navbar nav ul {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #navbar nav ul p,
+  #navbar nav ul a {
+    font-size: 1.3em;
+    font-weight: 900;
+  }
+  #cart,
+  #logIn {
+    border: 2px solid;
+    border-color: white;
+    padding: 3px 0.9em;
+    border-radius: 2em;
+  }
+  #cart:hover,
+  #logIn:hover {
+    border-color: white;
+  }
+  #mHosting,
+  #mVPS,
+  #mEmail,
+  #mDomain {
+    display: none !important;
+  }
+  .arrow {
+    display: none;
+  }
+  #quotes > div .card1 img,
+  #quotes > div .card2 img {
+    height: 32px;
+  }
+  #tough img {
+    height: 270px;
+  }
+  #tough p {
+    font-size: 15px;
+  }
+  #footer .row1 h4,
+  #footer .row2 h4,
+  #footer .row3 h4,
+  #footer .row4 h4 {
+    font-size: 15px;
+    font-weight: 200;
+  }
+  #footer .row1 h3,
+  #footer .row2 h3,
+  #footer .row3 h3,
+  #footer .row4 h3 {
+    font-size: 22px;
+    font-weight: 200;
+  }
+  #footer .row1 p {
+    font-size: 15px;
+  }
+  #footer .row1 img {
+    height: 32px;
+  }
+  #footer .pay .paycards img {
+    height: 28px;
+  }
+}
+
+/* ======================================================================
+========== #3- 950px ===================
+====================================================================== */
+
+@media (max-width: 950px) {
+  #Hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  #Hero .heroRight img {
+    height: 500px;
+  }
+  #ratings {
+    text-align: center;
+  }
+  #services {
+    font-size: 15px;
+  }
+  #special > div img {
+    height: 240px;
+  }
+  #special > div p {
+    font-size: 15px;
+  }
+  #special > div h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* ======================================================================
+========== #5- 800px ===================
+====================================================================== */
+
+@media (max-width: 800px) {
+  #Hero .heroRight img {
+    height: 400px;
+  }
+  .heroLeft h1 {
+    font-size: 1.4em;
+  }
+  .heroLeft p {
+    font-size: 16px;
+  }
+  #support img {
+    height: 80px;
+  }
+  #support img:nth-child(2) {
+    height: 38px;
+  }
+  #ratings h1 {
+    font-size: 1.4em;
+  }
+  #ratings p {
+    font-size: 16px;
+  }
+  #ratings .images img {
+    height: 80px;
+  }
+  #webHosting h1 {
+    font-size: 1.4em;
+  }
+  #webHosting p {
+    font-size: 16px;
+  }
+  #hostingTable h1 {
+    font-size: 1.4em;
+  }
+  #hostingTable .content h4 {
+    font-size: 14px;
+  }
+  #more h3 {
+    font-size: 14px;
+  }
+  .card1 h3,
+  .card2 h3 {
+    font-size: 18px;
+  }
+  #quotes .card1,
+  #quotes .card2 {
+    height: 15em;
+  }
+  #tough h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* ======================================================================
+========== #6- 740px ===================
+====================================================================== */
+
+@media (max-width: 740px) {
+  #Hero .heroRight img {
+    height: 320px;
+  }
+  .heroLeft h1 {
+    font-size: 1.2em;
+  }
+  .heroLeft {
+    width: 100%;
+  }
+  .heroLeft p {
+    font-size: 14px;
+  }
+  .heroLeft button,
+  .btn {
+    height: 2em;
+    margin: 0.8em 0px;
+    padding: 2px;
+    width: 7em;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 1.8em;
+  }
+  #support img {
+    height: 60px;
+  }
+  #support img:nth-child(2) {
+    height: 28px;
+  }
+  #ratings h1 {
+    font-size: 1.2em;
+  }
+  #ratings p {
+    font-size: 16px;
+  }
+  #ratings .images img {
+    height: 70px;
+  }
+  #webHosting h1 {
+    font-size: 1.2em;
+  }
+  #webHosting p {
+    font-size: 16px;
+  }
+  #hostingTable h1 {
+    font-size: 1.2em;
+  }
+  #hostingTable .content h4 {
+    font-size: 14px;
+  }
+  #webHosting .center button {
+    height: 2em;
+    margin: 0.8em 0px;
+    padding: 2px;
+    width: 7em;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 1.8em;
+  }
+  #clients button {
+    height: 2em;
+    margin: 0.8em 0px;
+    padding: 2px;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 1.8em;
+  }
+
+  #special .purple {
+    flex-direction: column-reverse;
+  }
+  #special .white {
+    flex-direction: column;
+  }
+  #special > div > div {
+    width: 80%;
+  }
+
+  #hostingTable {
+    width: 98%;
+  }
+  #clients .cards {
+    flex-direction: column;
+  }
+  #clients .cards .card {
+    flex-direction: column;
+    width: 400px;
+    margin: 10px 0;
+  }
+  #clients .card p:first-child {
+    font-size: 22px;
+  }
+  #more h3 {
+    font-size: 14px;
+  }
+  .card1 h3,
+  .card2 h3 {
+    font-size: 18px;
+  }
+  #quotes .card1,
+  #quotes .card2 {
+    height: 15em;
+    width: 22em;
+  }
+  #quotes > div .card1 img,
+  #quotes > div .card2 img {
+    height: 60px;
+  }
+  #quotes > div {
+    flex-direction: column;
+  }
+  #tough {
+    flex-direction: column;
+  }
+  #tough .right {
+    width: 80%;
+    text-align: center;
+  }
+  #tough img {
+    height: 320px;
+  }
+  #webHosting p {
+    width: 80%;
+  }
+  #special > div:nth-child(4) img {
+    height: 180px;
+  }
+  #services {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #services .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #services .record {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #services .cell {
+    margin: 1em auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 20%;
+    animation: verShake 2s infinite;
+  }
+
+  #services h1 {
+    font-size: 2.2em;
+    color: #0e0091;
+  }
+  #footer .row1 h4,
+  #footer .row2 h4,
+  #footer .row3 h4,
+  #footer .row4 h4 {
+    font-size: 10px;
+    font-weight: 200;
+  }
+  #footer .row1 h3,
+  #footer .row2 h3,
+  #footer .row3 h3,
+  #footer .row4 h3 {
+    font-size: 15px;
+    font-weight: 200;
+  }
+  #footer .row1 p {
+    font-size: 10px;
+  }
+  #footer .row1 img {
+    height: 24px;
+  }
+  #footer .pay .paycards img {
+    height: 18px;
+  }
+  #upperHead h1 {
+    font-size: 42px;
+  }
+  #upperHead p {
+    font-size: 20px;
+    width: 80%;
+  }
+  .form input {
+    height: 2em;
+    font-size: 20px;
+  }
+  .form button {
+    height: 2em;
+    font-size: 20px;
+  }
+}
+
+/* ======================================================================
+========== #7- 500px ===================
+====================================================================== */
+
+@media (max-width: 500px) {
+  #footer .row4 {
+    display: none;
+  }
+  #services {
+    width: 100%;
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+  #services .record {
+    width: 100%;
+    display: block;
+    margin-left: -10%;
+    padding: 0;
+  }
+  #Hero .heroRight img {
+    height: 270px;
+    margin-top: 2em;
+  }
+  #quotes .card1,
+  #quotes .card2 {
+    width: 15em;
+  }
+  #quotes > div .card1 img,
+  #quotes > div .card2 img {
+    height: 35px;
+  }
+  #quotes h2 {
+    font-size: 1.3em;
+    width: 70%;
+    text-align: center;
+  }
+
+  #tough img {
+    height: 250px;
+  }
+}
+
+/* ======================================================================
+========== #8- 412px ===================
+====================================================================== */
+
+@media (max-width: 412px) {
+  #support img {
+    height: 45px;
+  }
+  #support img:nth-child(2) {
+    height: 25px;
+  }
+  #ratings div {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #ratings .images {
+    height: 600px;
+  }
+  #clients .cards .card {
+    width: 320px;
+    height: 20em;
+  }
+  #webHosting h4,
+  .moreContent h3 {
+    font-size: 12px;
+  }
+  #clients button,
+  #webHosting .center button {
+    font-size: 18px;
+    padding: 5px 3px;
+  }
+  #Hero .heroRight img {
+    height: 200px;
+  }
+  #clients .cards .card p {
+    font-size: 16px;
+  }
+  #clients .cards .card h4 {
+    font-size: 17px;
+  }
+  #clients .cards .card h3 {
+    font-size: 18px;
+  }
+  #clients .cards .card {
+    height: 16em;
+    width: 250px;
+  }
+  #quotes .card1,
+  #quotes .card2 {
+    width: 250px;
+    height: 16em;
+  }
+  #quotes > div .card1 img,
+  #quotes > div .card2 img {
+    height: 30px;
+  }
+  #quotes .card1 p,
+  #quotes .card2 p {
+    font-size: 16px;
+  }
+  #special > div img {
+    height: 180px;
+    width: 250px;
+  }
+  #tough img {
+    height: 200px;
+  }
+  #clients h2 {
+    text-align: center;
+  }
+  #footer .row1 h4,
+  #footer .row2 h4,
+  #footer .row3 h4,
+  #footer .row4 h4 {
+    font-size: 8px;
+    font-weight: 100;
+  }
+  #footer .row1 h3,
+  #footer .row2 h3,
+  #footer .row3 h3,
+  #footer .row4 h3 {
+    font-size: 12px;
+    font-weight: 150;
+  }
+  #footer .row1 p {
+    font-size: 8px;
+  }
+  #footer .row1 img {
+    height: 18px;
+  }
+  #footer .pay {
+    display: none;
+  }
+  #webHosting .left,
+  #webHosting .right,
+  #webHosting .moreLeft,
+  #webHosting .moreRight {
+    display: none;
+  }
+  #webHosting .center,
+  #webHosting .moreCenter {
+    width: 80%;
+    font-size: 20px;
+    border: none;
+  }
+  #webHosting .center h4,
+  #webHosting .moreCenter h4 {
+    width: 80%;
+    font-size: 20px;
+  }
+  #more h3 {
+    font-size: 16px;
+    margin: 6px 0;
+  }
+  #ratings .images img {
+    height: 120px;
+  }
+  #upperHead h1 {
+    font-size: 36px;
+  }
+  #upperHead p {
+    font-size: 17px;
+    width: 90%;
+  }
+  .form input {
+    height: 1.7em;
+    width: 90%;
+  }
+  .form button {
+    height: 1.7em;
+    width: 90%;
+  }
+}
