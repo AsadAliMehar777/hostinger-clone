@@ -597,7 +597,7 @@ header nav li a img {
 #clients .card {
   width: 26%;
   border: 2px solid rgb(59, 59, 59);
-  height: 16em;
+  height: 20em;
   margin: 0 1em;
   padding: 30px 10px;
   animation: shake 2s infinite;
